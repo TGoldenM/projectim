@@ -1,0 +1,115 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+
+/* table/structure/table_structure_header.twig */
+class __TwigTemplate_2028377c4d591c04ec39cfe7daa6c02008de03d4935d5d68f4f0fc5c2b238172 extends \Twig\Template
+{
+    private $source;
+    private $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->parent = false;
+
+        $this->blocks = [
+        ];
+    }
+
+    protected function doDisplay(array $context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        // line 1
+        echo "<thead>
+    <tr>
+        <th class=\"print_ignore\"></th>
+        <th>#</th>
+        <th>";
+        // line 5
+        echo _gettext("Name");
+        echo "</th>
+        <th>";
+        // line 6
+        echo _gettext("Type");
+        echo "</th>
+        <th>";
+        // line 7
+        echo _gettext("Collation");
+        echo "</th>
+        <th>";
+        // line 8
+        echo _gettext("Attributes");
+        echo "</th>
+        <th>";
+        // line 9
+        echo _gettext("Null");
+        echo "</th>
+        <th>";
+        // line 10
+        echo _gettext("Default");
+        echo "</th>
+        ";
+        // line 11
+        if (($context["show_column_comments"] ?? null)) {
+            // line 12
+            echo "<th>";
+            echo _gettext("Comments");
+            echo "</th>";
+        }
+        // line 14
+        echo "        <th>";
+        echo _gettext("Extra");
+        echo "</th>
+        ";
+        // line 16
+        echo "        ";
+        if (( !($context["db_is_system_schema"] ?? null) &&  !($context["tbl_is_view"] ?? null))) {
+            // line 17
+            echo "            <th colspan=\"";
+            echo ((PhpMyAdmin\Util::showIcons("ActionLinksMode")) ? ("8") : ("9"));
+            // line 18
+            echo "\" class=\"action print_ignore\">";
+            echo _gettext("Action");
+            echo "</th>
+        ";
+        }
+        // line 20
+        echo "    </tr>
+</thead>
+";
+    }
+
+    public function getTemplateName()
+    {
+        return "table/structure/table_structure_header.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  91 => 20,  85 => 18,  82 => 17,  79 => 16,  74 => 14,  69 => 12,  67 => 11,  63 => 10,  59 => 9,  55 => 8,  51 => 7,  47 => 6,  43 => 5,  37 => 1,);
+    }
+
+    public function getSourceContext()
+    {
+        return new Source("", "table/structure/table_structure_header.twig", "/home/vagrant/code/phpmyadmin/templates/table/structure/table_structure_header.twig");
+    }
+}
