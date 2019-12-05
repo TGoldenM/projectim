@@ -1,3 +1,4 @@
+  
 import groupBy from 'lodash/groupBy';
 
 export const isSubTable = ({ subTable }) => Array.isArray(subTable);
@@ -7,11 +8,11 @@ export const groupRowsByKey = (rows, groupKey) => {
   const grouped = groupBy(rows, groupKey);
 
   Object.keys(grouped).forEach((key) => {
-    const [first, ...rest] = grouped[key];
+    const [first] = grouped[key];
     groupedRows.push(
       first,
     );
-    if (rest && rest.length) {
+    if (grouped[key] && grouped[key].length) {
       groupedRows.push(
         { ...first, id: Date.now() + Math.random(), subTable: grouped[key] },
       );
