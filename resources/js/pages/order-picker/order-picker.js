@@ -75,7 +75,7 @@ function getAllData(callback) {
 
       const orderItemsWithProductLotAndProduct = orderItemsWithProductLot.map((eachItem) => {
         const product = productsResponse
-          .find(({ id }) => id === eachItem.productLot.product_id) || {};
+          .find(({ product_lot_id }) => product_lot_id === eachItem.product_lot_id) || {};
 
         return { ...eachItem, product };
       });
